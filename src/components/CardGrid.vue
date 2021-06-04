@@ -1,15 +1,17 @@
 <template>
   <div class="block sm:w-4/5">
-    <div >
+    <div>
+   
       <div class="grid lg:h-80" v-if="cards.length"> 
       <app-card v-for="(card,id) in cards" :key="id">
-        <p>put</p>
-        <!--img class="w-full" :src="card.imageUrl" alt="man's best friend" />
+        
+        <img class="w-full" :src="card" alt="man's best friend" />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">{{ card.name }}</div>
-        </div-->
+          <!--div class="font-bold text-xl mb-2">{{ card.name }}</div-->
+        </div>
       </app-card>
       </div>
+      
       <div class="w-full text-center" v-else-if="cards.length"><p class="text-2xl"> No result found</p></div>
       <div class="w-full text-center" v-else><p class="text-2xl"> Loading...</p></div>
     </div>

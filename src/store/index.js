@@ -17,8 +17,8 @@ const actions = {
     getPosts({ commit }) {
         axios.get('https://dog.ceo/api/breed/hound/images')
         .then(response => {
-            console.log(response.data)
-        commit('SET_POSTS', response.data)
+            console.log(response.data.message[0,2,3])
+        commit('SET_POSTS', response.data.message)
         })
         }
 }
